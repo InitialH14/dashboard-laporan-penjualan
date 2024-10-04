@@ -22,7 +22,7 @@ max_date = datetime.strptime(all_df["shipping_limit_date"].max(), '%Y-%m-%d %H:%
 
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("../logo.png")
+    st.image("/mount/src/dashboard-laporan-penjualan/logo.png")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
