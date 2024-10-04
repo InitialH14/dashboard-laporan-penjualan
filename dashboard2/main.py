@@ -15,7 +15,7 @@ def create_total_buying_items_df(df):
     sum_order_items_df = df.groupby(by="product_category_name")['order_id'].nunique().sort_values(ascending=False).reset_index()
     return sum_order_items_df
 
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("/mount/src/dashboard-laporan-penjualan/dashboard2/all_data.csv")
 
 min_date = datetime.strptime(all_df["shipping_limit_date"].min(), '%Y-%m-%d %H:%M:%S').date()
 max_date = datetime.strptime(all_df["shipping_limit_date"].max(), '%Y-%m-%d %H:%M:%S').date()
